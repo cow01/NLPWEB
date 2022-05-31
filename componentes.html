@@ -7,29 +7,93 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-    Universidad de COLIMA
+<style>
+    body {
+    position: relative; 
+    margin: 10px;
+    background: #E6E6FA;
+  }
+
+  nav{
+    float: right;
+}
+
+  nav ul li{
+    list-style: none;
+    margin-left: 50px;
+    float: left;
+    padding: 6px 0;
+    position: relative;
+}
+
+  nav ul li a{
+    text-decoration:solid;
+    font-weight: bold;
+}
+
+  nav ul li a::before{
+    display: block;
+    content: '';
+    width: 0%;
+    background: #444;
+    height: 5px;
+    top: 0;
+    position: absolute;
+    transition: width 0.2s;
+}
+
+  nav ul li a:hover::before{
+    width: 100%;
+}
+
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 50%;
+    height: 50%;
+  }
+
+  p{
+    line-height : 35px;
+    font-size: large;
+    text-align: justify;
+  }
+
+  h4 {
+    color: rgb(9, 134, 184);
+  }
+    
+  h5 {
+    color: rgb(5, 134, 184);
+  }
+
+  .referencia{
+    text-align: right;
+  }
+
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<div id="section21" class="container-fluid bg-light" style="padding-top:70px;padding-bottom:70px;">
+  <h1>Universidad de COLIMA
  Facultad de ingeniería mecánica y eléctrica
  Ingeniería en computación inteligente
-6°D
-
+ 6°D
  Procesamiento del lenguaje natural
  Investigación componentes pln
-
  Oswaldo carrillo Zepeda
-
-Axel Hervey Cruz Báez
-
-COQUIMATLAN, COLIMa
-
+ Axel Hervey Cruz Báez
+ COQUIMATLAN, COLIMa
  18/05/2022
- © todos los derechos reservados
-QUE ES pln
+ © todos los derechos reservados</h1><br>
+ <br><br>
+  <p>
 El Procesamiento del Lenguaje Natural es una rama de conocimiento de la Inteligencia
 Artificial que, esencialmente, pretende conseguir que una máquina comprenda lo que
 expresa una persona mediante el uso de una lengua natural (inglés, español, chino...).
@@ -38,13 +102,15 @@ texto) o por signos. Obviamente, la expresión escrita está mucho más document
 es más fácil de conseguir y tratar que la oral o el lenguaje de signos. Por lo tanto, el
 Procesamiento del Lenguaje Natural está mucho más avanzado en el tratamiento de
 textos escritos.
-En teoría, cualquier lengua humana puede ser interpretada y tratada por un ordenador,
+
+      En teoría, cualquier lengua humana puede ser interpretada y tratada por un ordenador,
 aunque esto en la práctica no se hace, dadas las limitaciones económicas o las
 escasas aplicaciones que tendría interpretar las más de 3.000 lenguas catalogadas
-existentes en el mundo.
-
+existentes en el mundo. 
+      
 Componentes pln
-Vemos algunos de los componentes del procesamiento del lenguaje natural. No todos
+
+      Vemos algunos de los componentes del procesamiento del lenguaje natural. No todos
 los análisis que se describen se aplican en cualquier tarea de PLN, sino que depende
 del objetivo de la aplicación.
 1.-Análisis morfológico o léxico: Consiste en el análisis interno de las palabras que
@@ -58,12 +124,12 @@ eliminadas las ambigüedades morfosintácticas.
 Aquí se incluye el tratamiento del lenguaje figurado (metáfora e ironía) como el
 conocimiento del mundo específico necesario para entender un texto especializado.
 A continuación, se dará una explicación más detallada de cada uno de los componentes.
-
-
-
-Análisis morfológico o léxico
-
-Su función consiste en detectar la relación que se establece entre las unidades
+    </p><br>
+    <br><br>
+    
+    <h4><i><strong>Análisis morfológico o léxico.</strong></i></h4>
+  <p>
+    Su función consiste en detectar la relación que se establece entre las unidades
 mínimas que forman una palabra, como puede ser el reconocimiento de sufijos o
 prefijos. Este nivel de análisis mantiene una estrecha relación con el léxico.
 El léxico es el conjunto de información sobre cada palabra que el sistema utiliza para
@@ -75,26 +141,22 @@ irregularidades sintácticas y representación del significado.
 Normalmente el léxico sólo contiene la raíz de las palabras con formas regulares,
 siendo el analizador morfológico el que se encarga de determinar si el género,
 número o flexión que componen el resto de la palabra son adecuados.
+  </p>
 
+ <br><br>
 
-Análisis sintáctico
-
-Tiene como función etiquetar cada uno de los componentes sintácticos que aparecen
+    <h4><i><strong>Análisis sintáctico.</strong></i></h4>
+  <p>
+  Tiene como función etiquetar cada uno de los componentes sintácticos que aparecen
 en la oración y analizar cómo las palabras se combinan para formar construcciones
 gramaticalmente correctas. El resultado de este proceso consiste en generar la
 estructura correspondiente a las categorías sintácticas formadas por cada una de las
 unidades léxicas que aparecen en la oración.
-
-
-
-
-
-
-
-
-Análisis semántico
-
-En muchas aplicaciones del PLN los objetivos del análisis apuntan hacia el
+  </p><br><br>
+  
+   <h4><i><strong>Análisis semántico.</strong></i></h4>
+<p>
+    En muchas aplicaciones del PLN los objetivos del análisis apuntan hacia el
 procesamiento del significado. En los últimos años las técnicas de procesamiento
 sintáctico han experimentado avances significativos, resolviendo los problemas
 fundamentales.
@@ -113,10 +175,13 @@ condiciones de verdad de la frase, ignorando la influencia del contexto o las
 intenciones del hablante. Por otra parte, el componente significativo de una frase
 asociado a las circunstancias en que ésta se da, es estudiado por la pragmática y
 conocido como significado dependiente del contexto.
-
-Análisis pragmático
-
-Añade información adicional al análisis del significado de la frase en función del
+  
+  </p><br><br>
+  
+  
+  <h4><i><strong>Análisis pragmático.</strong></i></h4>
+  <p>
+ Añade información adicional al análisis del significado de la frase en función del
 contexto donde aparece. Se trata de uno de los niveles de análisis más complejos, la
 finalidad del cual es incorporar al análisis semántico la aportación significativa que
 pueden hacer los participantes, la evolución del discurso o información presupuesta.
@@ -130,6 +195,9 @@ lenguaje humano, analiza cómo las palabras se relacionan con los sonidos que
 representan. Un sistema de procesamiento fonológico tiene como entrada la voz
 humana, esta se analiza y codifica para establecer comparaciones con otros
 lenguajes.
-    
+  
+  </p><br><br>
+   
 </body>
+   
 </html>
